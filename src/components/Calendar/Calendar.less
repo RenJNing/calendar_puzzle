@@ -1,0 +1,71 @@
+@container-background-color: #e2ded5;
+@block-color: #8e8b31;
+@gap-border-color: #292301;
+@base-skeleton-font-color: #9d9686;
+
+.container {
+  position: relative;
+  display: inline-block;
+  padding: 25px 25px 100px;
+  border-radius: 10px;
+  background: @container-background-color;
+}
+
+.sunken {
+  box-shadow: inset 0 0 5px 2px #3a2b1e;
+}
+
+.blockRow {
+  display: flex;
+}
+
+.blockCell {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  .baseCell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid @gap-border-color;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @container-background-color;
+    text-shadow: 1px 1px @base-skeleton-font-color, -1px -1px @base-skeleton-font-color,
+      1px -1px @base-skeleton-font-color, -1px 1px @base-skeleton-font-color;
+  }
+  .filledCell {
+    height: 100%;
+    box-sizing: border-box;
+    background: @block-color;
+    border: 1px solid @block-color;
+    @border: 1px solid @gap-border-color;
+    &.borderTop {
+      border-top: @border;
+    }
+    &.borderBottom {
+      border-bottom: @border;
+    }
+    &.borderLeft {
+      border-left: @border;
+    }
+    &.borderRight {
+      border-right: @border;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  bottom: 35px;
+  left: 40px;
+  width: 130px;
+}
+
+.slogan {
+  position: absolute;
+  bottom: 35px;
+  right: 25px;
+  width: 255px;
+}
